@@ -9,7 +9,9 @@ def diasiguiente(dia:int, mes:int, año:int):
     assert isinstance(año,int) and año > 0, f"{año} debe ser un entero positivo"
     
     # Meses con 31 días
-    if mes in [1,3,5,7,8,10,12]:
+    mes_31 = [1,3,5,7,8,10,12]
+    mes_30 = [4,6,9,11]
+    if mes in mes_31:
         if dia < 31:
             dia += 1
         else:
@@ -20,7 +22,7 @@ def diasiguiente(dia:int, mes:int, año:int):
             else:
                 mes += 1
     # Meses con 30 días
-    elif mes in [4,6,9,11]:
+    elif mes in mes_30:
         assert dia <= 30, f"{dia} es inválido para el mes {mes}"
         if dia < 30:
             dia += 1
@@ -47,14 +49,15 @@ def diasiguiente(dia:int, mes:int, año:int):
     return dia, mes, año
 
 
-def sumar_N_dias(dia:int, mes:int, año:int, N:int):
+def sumar_N_dias(dia:int, mes:int, año:int, num:int):
     """
     Suma N días a la fecha ingresada usando diasiguiente.
     pre: N es entero positivo
     post: devuelve la fecha resultante como 3 enteros
     """
-    assert isinstance(N,int) and N >= 0, "N debe ser un entero positivo"
-    for _ in range(N):
+    assert isinstance(num,int) and num >= 0, "N debe ser un entero positivo"
+
+    for i in range(num):
         dia, mes, año = diasiguiente(dia, mes, año)
     return dia, mes, año
 
