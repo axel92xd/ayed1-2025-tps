@@ -10,13 +10,14 @@ def fecha_valida(dia: int, mes: int, anio: int) -> bool:
     assert isinstance(anio, int) and anio > 0, f"{anio} debe ser un entero positivo"
 
     # Meses con 31 días
-    for i iun
-    if mes == 1 or mes == 3 or mes == 5 or mes == 7 or mes == 8 or mes == 10 or mes == 12:
-        return dia <= 31
+    for i in [1, 3, 5, 7, 8, 10, 12]:
+        if mes == i:
+            return dia <= 31
 
     # Meses con 30 días
-    if mes == 4 or mes == 6 or mes == 9 or mes == 11:
-        return dia <= 30
+    for i in [4, 6, 9, 11]:
+        if mes == i:
+            return dia <= 30
 
     # Febrero
     if mes == 2:

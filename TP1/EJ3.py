@@ -1,3 +1,4 @@
+
 def calcular_gasto_subte(viajes: int) -> float:
     """
     Calcula el total gastado en viajes en subte según la cantidad de viajes realizados.
@@ -7,26 +8,32 @@ def calcular_gasto_subte(viajes: int) -> float:
     """
     assert isinstance(viajes, int) and viajes > 0, "La cantidad de viajes debe ser un número entero positivo"
     
-    # Tarifas por rango de viajes
-    """
-    Calcula el total gastado en el subte según la cantidad de viajes,
-    aplicando automáticamente los descuentos según la tabla.
-    """
-    total = 0
     tarifa_base = 1031.00
-    
-    for i in range(1, viajes + 1):
-        if i <= 20:
+    total = 0.0
+
+    # Generar lista de viajes sin usar range
+    lista_viajes = []
+    contador = 1
+    while contador <= viajes:
+        lista_viajes.append(contador)
+        contador += 1
+
+    # Calcular tarifas
+    for viaje in lista_viajes:
+        if viaje <= 20:
             tarifa = tarifa_base
-        elif i <= 30:
+        elif viaje <= 30:
             tarifa = tarifa_base * 0.8   # 20% descuento
-        elif i <= 40:
+        elif viaje <= 40:
             tarifa = tarifa_base * 0.7   # 30% descuento
         else:
             tarifa = tarifa_base * 0.6   # 40% descuento
         total += tarifa
 
+    assert total >= 0
     return total
+
+
 def main():
     viajes = int(input("Ingrese la cantidad de viajes realizados en el mes: "))
     total = calcular_gasto_subte(viajes)
@@ -34,4 +41,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

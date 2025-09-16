@@ -49,7 +49,7 @@ def diasiguiente(dia:int, mes:int, año:int):
     return dia, mes, año
 
 
-def sumar_N_dias(dia:int, mes:int, año:int, num:int):
+def sumar_dias(dia:int, mes:int, año:int, num:int):
     """
     Suma N días a la fecha ingresada usando diasiguiente.
     pre: N es entero positivo

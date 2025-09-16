@@ -13,7 +13,7 @@ def generar_lista_aleatoria() -> List[int]:
     """
     cantidad = rn.randint(10, 99)
     lista = []
-    for _ in [None]*cantidad:  # iterable dummy para evitar range
+    for _ in [None]*cantidad:  
         lista.append(rn.randint(1000, 9999))
     assert all(1000 <= n <= 9999 for n in lista)
     return lista
