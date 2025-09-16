@@ -1,8 +1,6 @@
 import random as rn
 from typing import List
 
-# ==================== FUNCIONES ====================
-
 def generar_lista_aleatoria() -> List[int]:
     """
     Genera una lista con números aleatorios de 4 dígitos.
@@ -67,26 +65,22 @@ def verificar_capicua(lista: List[int]) -> bool:
 
 
 def main():
-    # Generar lista
     lista = generar_lista_aleatoria()
     print("Lista generada aleatoriamente:")
     print(lista)
 
-    # Producto de la lista
     prod = producto_total(lista)
     print(f"\nProducto de todos los elementos: {prod}")
 
-    # Eliminar valor
     valor_a_eliminar = int(input("\nIngrese un valor a eliminar de la lista: "))
     lista_modificada = eliminar_valor(lista[:], valor_a_eliminar)
     print("Lista después de eliminar el valor:")
     print(lista_modificada)
 
-    # Verificar si es capicúa
     if verificar_capicua(lista):
         print("\nLa lista original es capicúa.")
     else:
         print("\nLa lista original no es capicúa.")
 
-# Ejecutar programa
-main()
+if __name__ == "__main__":
+    main()
