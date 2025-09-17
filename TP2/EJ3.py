@@ -15,7 +15,7 @@ def lista_cuadrados() -> List[int]:
 
 def main():
     cuadrados = lista_cuadrados()
-    print("\nÚltimos 10 valores de la lista de cuadrados:")
+    print("\nUltimos 10 valores de la lista de cuadrados:")
     print(cuadrados[-10:])
 
 if __name__ == "__main__":
