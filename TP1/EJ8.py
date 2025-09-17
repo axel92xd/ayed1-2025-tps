@@ -6,7 +6,7 @@ def diadelasemana(dia: int, mes: int, año: int) -> int:
     post: devuelve un entero entre 0 y 6,
           donde 0=domingo, 1=lunes, ..., 6=sábado
     """
-    assert isinstance(dia, int) and dia > 0, "El día debe ser un entero positivo"
+    assert isinstance(dia, int) and dia > 0, "El dia debe ser un entero positivo"
     assert isinstance(mes, int) and 1 <= mes <= 12, "El mes debe estar entre 1 y 12"
     assert isinstance(año, int) and año > 0, "El año debe ser positivo"
 
@@ -34,8 +34,8 @@ def dias_en_mes(mes: int, año: int) -> int:
     pre: 1 <= mes <= 12, año > 0
     post: resultado en [28,29,30,31]
     """
-    assert isinstance(mes, int) and 1 <= mes <= 12, "Mes inválido"
-    assert isinstance(año, int) and año > 0, "Año inválido"
+    assert isinstance(mes, int) and 1 <= mes <= 12, "Mes invalido"
+    assert isinstance(año, int) and año > 0, "Año invalido"
 
     if mes in [1, 3, 5, 7, 8, 10, 12]:
         dias = 31
@@ -45,7 +45,7 @@ def dias_en_mes(mes: int, año: int) -> int:
         bisiesto = año % 4 == 0 and (año % 100 != 0 or año % 400 == 0)
         dias = 29 if bisiesto else 28
 
-    assert dias in [28, 29, 30, 31], "Número de días inválido"
+    assert dias in [28, 29, 30, 31], "Número de días invalido"
     return dias
 
 
@@ -55,8 +55,8 @@ def imprimir_calendario(mes: int, año: int) -> None:
     pre: 1 <= mes <= 12, año > 0
     post: imprime el calendario con formato correcto
     """
-    assert isinstance(mes, int) and 1 <= mes <= 12, "Mes inválido"
-    assert isinstance(año, int) and año > 0, "Año inválido"
+    assert isinstance(mes, int) and 1 <= mes <= 12, "Mes invalido"
+    assert isinstance(año, int) and año > 0, "Año invalido"
 
     print(f"\n   Calendario {mes}/{año}")
     print("Do Lu Ma Mi Ju Vi Sa")
@@ -86,6 +86,5 @@ def main():
     año = int(input("Ingrese el año: "))
     imprimir_calendario(mes, año)
 
-
-# Programa principal
-main()
+if __name__ == "__main__":
+    main()

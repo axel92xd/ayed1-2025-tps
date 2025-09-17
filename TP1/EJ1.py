@@ -16,7 +16,6 @@ def mayor_unico (numero1: int, numero2: int, numero3: int) -> int:
     else:
         return max(numero1,numero2,numero3)
 
-#Funcion
 def main():
     numero1 = int(input("Ingrese el primer numero: "))
     numero2 = int(input("Ingrese el segundo numero: "))

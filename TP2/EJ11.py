@@ -1,20 +1,18 @@
 from typing import List, Tuple
 
-# ==================== Funciones ====================
-
 def cargar_pacientes() -> Tuple[List[int], List[int]]:
     """
     Carga los pacientes hasta ingresar -1 como número de afiliado.
     Separa los pacientes por urgencia (0) y turno (1).
     
-    Pre: El número de afiliado es entero de 4 dígitos y el tipo 0 o 1
+    Pre: El numero de afiliado es entero de 4 dígitos y el tipo 0 o 1
     Post: Devuelve dos listas: urgencia y turno, con los números de afiliado en orden de llegada
     """
     urgencia = []
     turno = []
     
     while True:
-        nro_afiliado = int(input("Ingrese número de afiliado (4 dígitos, -1 para terminar): "))
+        nro_afiliado = int(input("Ingrese numero de afiliado (4 dígitos, -1 para terminar): "))
         if nro_afiliado == -1:
             break
         tipo = int(input("Ingrese 0 para urgencia, 1 para turno: "))
@@ -27,7 +25,7 @@ def cargar_pacientes() -> Tuple[List[int], List[int]]:
 
 def buscar_afiliado(nro: int, urgencia: List[int], turno: List[int]) -> Tuple[int, int]:
     """
-    Cuenta cuántas veces un afiliado fue atendido por urgencia y por turno.
+    Cuenta cuantas veces un afiliado fue atendido por urgencia y por turno.
     
     Pre: nro >= 0
     Post: Devuelve dos enteros: cantidad urgencias y cantidad turnos

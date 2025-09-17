@@ -1,6 +1,6 @@
 def impares_100_200() -> list[int]:
     """
-    Construye una lista con todos los números impares entre 100 y 200.
+    Construye una lista con todos los numeros impares entre 100 y 200.
     
     Pre: Ninguna
     Post: Devuelve una lista de enteros impares entre 100 y 200

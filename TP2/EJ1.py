@@ -20,10 +20,10 @@ def producto_total(lista: List[int]) -> int:
     """
     Calcula el producto de todos los elementos de una lista.
 
-    Pre: lista no vacía
+    Pre: lista no vacia
     Post: devuelve un entero positivo
     """
-    assert lista, "La lista no puede estar vacía"
+    assert lista, "La lista no puede estar vacia"
     resultado = 1
     for numero in lista:
         resultado *= numero
@@ -49,10 +49,10 @@ def eliminar_valor(lista: List[int], valor: int) -> List[int]:
 
 def verificar_capicua(lista: List[int]) -> bool:
     """
-    Determina si una lista es capicúa.
+    Determina si una lista es capicua.
 
     Pre: lista de enteros
-    Post: True si es capicúa, False en caso contrario
+    Post: True si es capicua, False en caso contrario
     """
     izquierda = 0
     derecha = len(lista) - 1
@@ -74,13 +74,13 @@ def main():
 
     valor_a_eliminar = int(input("\nIngrese un valor a eliminar de la lista: "))
     lista_modificada = eliminar_valor(lista[:], valor_a_eliminar)
-    print("Lista después de eliminar el valor:")
+    print("Lista despues de eliminar el valor:")
     print(lista_modificada)
 
     if verificar_capicua(lista):
-        print("\nLa lista original es capicúa.")
+        print("\nLa lista original es capicua.")
     else:
-        print("\nLa lista original no es capicúa.")
+        print("\nLa lista original no es capicua.")
 
 if __name__ == "__main__":
     main()

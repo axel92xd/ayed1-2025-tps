@@ -102,4 +102,5 @@ def main():
     total = dias_entre_fechas(dia, mes, año, dia2, mes2, año2)
     print(f"Días entre las fechas: {total}")
 
-main()
+if __name__ == "__main__":
+    main()

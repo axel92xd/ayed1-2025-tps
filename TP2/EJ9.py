@@ -1,7 +1,7 @@
 # ==================== Ejercicio 9 ====================
 def multiplos_7(A: int, B: int) -> list[int]:
     """
-    Genera lista de números entre A y B (inclusive) que sean múltiplos de 7 pero no de 5.
+    Genera lista de números entre A y B (inclusive) que sean multiplos de 7 pero no de 5.
     
     Pre: A y B enteros, A <= B
     Post: Lista de enteros que cumplen la condición

@@ -13,9 +13,9 @@ def intercalar_listas(lista1: List[int], lista2: List[int]) -> None:
     min_len = min(len(lista1), len(lista2))
     
     for i in range(min_len):
-        lista1[i*2+1:i*2+1] = [lista2[i]]  # Insertar usando slice
+        lista1[i*2+1:i*2+1] = [lista2[i]] 
     
-    # Si lista2 es más larga, agregar el resto al final de lista1
+    # Si lista2 es mas larga, agregar el resto al final de lista1
     if len(lista2) > len(lista1):
         lista1[len(lista1):len(lista1)] = lista2[min_len:]
 

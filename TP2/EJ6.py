@@ -5,12 +5,12 @@ def normalizar_lista(valores: List[int]) -> List[float]:
     Recibe una lista de enteros y devuelve una lista normalizada, 
     de manera que la suma de sus elementos sea 1.0, respetando las proporciones relativas.
 
-    Pre: lista no vacía, elementos enteros >= 0
+    Pre: lista no vacia, elementos enteros >= 0
     Post: retorna lista de floats cuya suma es 1.0 si la lista no es toda cero,
           o lista de ceros si todos los elementos son 0.
     """
 
-    assert isinstance(valores, list) and valores, "La lista no puede estar vacía"
+    assert isinstance(valores, list) and valores, "La lista no puede estar vacia"
 
     suma_total = sum(valores)
     lista_normalizada = []
@@ -33,7 +33,7 @@ def main():
     for lista in [lista1, lista2, lista3]:
         print(f"Lista Base: {lista} -> Normalizada: {normalizar_lista(lista)}")
 
-    entrada = input("Ingrese números enteros separados por espacios: ")
+    entrada = input("Ingrese numeros enteros separados por espacios: ")
     lista_usuario = [int(x) for x in entrada.split()]
     print("Lista normalizada:", normalizar_lista(lista_usuario))
 

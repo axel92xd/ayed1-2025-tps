@@ -1,8 +1,6 @@
 import random as rn
 from typing import List
 
-# ==================== FUNCIONES ====================
-
 def generar_lista_numeros() -> List[int]:
     """
     Genera una lista de N números aleatorios entre 1 y 100.
@@ -11,7 +9,7 @@ def generar_lista_numeros() -> List[int]:
     Pre: N > 0
     Post: Devuelve lista de enteros entre 1 y 100 de tamaño N
     """
-    N = int(input("Ingrese la cantidad de números: "))
+    N = int(input("Ingrese la cantidad de numeros: "))
     assert N > 0, "N debe ser mayor que cero"
 
     lista = []
@@ -29,7 +27,7 @@ def tiene_elementos_repetidos(lista: List[int]) -> bool:
     Determina si la lista tiene elementos repetidos.
 
     Pre: lista de enteros
-    Post: True si hay repetidos, False si todos son únicos
+    Post: True si hay repetidos, False si todos son unicos
     """
     assert isinstance(lista, list)
     for elemento in lista:
@@ -39,7 +37,7 @@ def tiene_elementos_repetidos(lista: List[int]) -> bool:
 
 def obtener_elementos_unicos(lista: List[int]) -> List[int]:
     """
-    Devuelve una lista con los elementos únicos de la lista original.
+    Devuelve una lista con los elementos unicos de la lista original.
 
     Pre: lista de enteros
     Post: lista sin duplicados
@@ -63,11 +61,9 @@ def main():
     # Verificar si hay elementos repetidos
     print("\n¿Contiene elementos repetidos?:", tiene_elementos_repetidos(lista))
 
-    # Lista con elementos únicos
     unicos = obtener_elementos_unicos(lista)
     print("\nLista con elementos únicos:")
     print(unicos)
 
-# Ejecutar programa
 if __name__ == "__main__":
     main()

@@ -89,6 +89,5 @@ def main():
     print(f"Naranjas sobrantes (no completan cajón): {sobrantes}")
     print(f"Camiones despachados: {camiones}")
 
-
-# Programa principal
-main()
+if __name__ == "__main__":
+    main()
