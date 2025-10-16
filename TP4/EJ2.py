@@ -12,8 +12,6 @@ def centrar_cadena(cadena: str, ancho: int = 80):
 def main():
     """
     Función principal para leer una cadena del usuario y mostrarla centrada.
-    Pre: Ninguna, el programa solicitará la entrada al usuario.
-    Post: Llama a la función centrar_cadena para imprimir el resultado en la consola.
     """
     texto_usuario = input("Ingrese la cadena de caracteres a centrar: ")
     centrar_cadena(texto_usuario)

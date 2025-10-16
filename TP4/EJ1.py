@@ -24,6 +24,9 @@ def es_capicua(cadena: str) -> bool:
 
 
 def main():
+    """    
+    Función principal para verificar si una cadena es capicúa.
+    """
     cadena_usuario = input("Ingrese la cadena: ")
     if es_capicua(cadena_usuario):
         print("Es capicúa.")
