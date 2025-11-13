@@ -44,7 +44,6 @@ def main():
     Pre: No recibe parámetros.
     Post: Inicia el juego de adivinar el número.
     """
-
     juego_adivinar_numero()
 
 if __name__ == "__main__":
